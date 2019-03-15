@@ -1,3 +1,6 @@
+/* here we have hve made a simple calculator by which we can do simple things like addition,
+ subtraction, product, last digit, odd even,n number printing, that' the whole things of this program.*/
+
 #include <stdio.h>
 #include <conio.h>
 main(){

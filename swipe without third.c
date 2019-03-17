@@ -1,3 +1,4 @@
+/* in this problem, we are just swiping two number without the help of third variable.*/
 #include<stdio.h>
 int main(){
 int a,b;

@@ -1,8 +1,8 @@
 main(){
-    int x,y;
+    int x,y;\\two variables for two numbers
     printf("Enter Two Numbers");
-    scanf("%d%d",&x,&y);
-    add(x,y);
+    scanf("%d%d",&x,&y);\\for scaning two numbers
+    add(x,y);\\function call
 }
 void add(int a,int b){
 int c;

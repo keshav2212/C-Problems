@@ -1,3 +1,6 @@
+/*Problem :- Here we are doing to convert upper case alphabets to lower case alphabets that's all.*/
+
+#include<stdio.h>
 main(){
 char str[20];
 int i;

@@ -18,6 +18,13 @@ inorder(root->left);
 printf("%d ",root->data);
 inorder(root->right);
 }
+void preorder(struct tree *root){
+    if(root==NULL)
+        return;
+printf("%d  ",root->data);
+preorder(root->left);
+preorder(root->right);
+}
 
 int main(){
 struct tree * root=newnode(1);
@@ -26,4 +33,6 @@ root->right=newnode(3);
 root->left->left=newnode(4);
 root->left->right=newnode(5);
 inorder(root);
+printf("\n");
+preorder(root);
 }

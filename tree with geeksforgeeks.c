@@ -2,8 +2,53 @@
 struct tree{
 int data;
 struct tree *left;
-struct tee *right;
-};
+struct tree *right;};
+struct tree * stack[100];
+int top=-1;
+void push(struct tee * root){
+stack[++top]=root;
+}
+struct tree * delete2(struct tree * root,int data){
+struct tree *temp;
+if(root==NULL)
+    printf("No such Element Exist\n");
+else if(data>root->data)
+    root->right=delete2(root->right,data);
+else if(data<root->data)
+    root->left=delete2(root->left,data);
+else{
+    if(root->left&&root->right){
+        temp=FindMax(root->left);
+        root->data=temp->data;
+        root->left=delete2(root->left,root->data);
+    }
+    else{
+        temp=root;
+        if(root->left==NULL)
+            root=root->right;
+        if(root->right==NULL)
+            root=root->left;
+        free(temp);
+
+    }
+    }
+    return(root);
+}
+void pop(){
+printf("%d",(stack[top]->data));
+top--;
+}
+/*void inorder1(struct node * root){
+
+while(curr){
+    push(curr);
+    curr=curr->left;
+}
+if(curr==NULL&&top==-1){
+pop();
+curr=curr->right;
+}
+}*/
 struct tree * newnode(int data){
 struct tree* node=(struct tree *)malloc(sizeof(struct tree));
 node->data=data;
@@ -57,6 +102,7 @@ else{
 }
 return root;
     }
+
 int main(){
 struct tree * root=NULL;
 while(1){

@@ -64,13 +64,12 @@ void levelorder(struct tree * root){
 struct tree *  temp_node=root;
 while(temp_node!=NULL){
     printf("%d ",temp_node->data);
+    if(temp_node->left)
     insertqueue(temp_node->left);
+    if(temp_node->right)
     insertqueue(temp_node->right);
     temp_node=delete1();
-}
-
-
-}
+}}
 /*void inorder1(struct node * root){
 
 while(curr){
